@@ -21,6 +21,6 @@ from CardQuest_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.HomePageView.as_view(), name='home'),
+    path('', views.HomePageView.as_view(), name='base'),
     path('trainer_list', TrainerList.as_view(), name='trainer-list')
 ]

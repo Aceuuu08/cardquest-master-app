@@ -7,7 +7,7 @@ from CardQuest_app.models import PokemonCard, Trainer
 class HomePageView(ListView):
     model = PokemonCard
     content_type_name = 'home'
-    template_name = "home.html"
+    template_name = "base.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
