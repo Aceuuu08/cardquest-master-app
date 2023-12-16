@@ -15,7 +15,7 @@ class PokemonCardAdmin(BaseModelAdmin):
     )
 
 class CollectionAdmin(BaseModelAdmin):
-    list_display = ('card', 'trainer', 'collection date', 'created_at', 'updated_at')
+    list_display = ('card', 'trainer', 'collection_date', 'created_at', 'updated_at')
 
 
 
