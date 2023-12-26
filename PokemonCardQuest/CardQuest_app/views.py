@@ -45,7 +45,7 @@ class PokemonCardCreateView(CreateView):
     model = PokemonCard
     form_class = PokemonCardForm
     template_name = 'pokemon-card_create.html'
-    success_url = reverse_lazy('pokemoncard-list')
+    success_url = reverse_lazy('pokemon_card')
 
 class CollectionCreateView(CreateView):
     model = Collection
@@ -64,7 +64,7 @@ class PokemonCardUpdateView(UpdateView):
     model = PokemonCard
     form_class = PokemonCardForm
     template_name = 'pokemon-card_update.html'
-    success_url = reverse_lazy('pokemoncard-list')
+    success_url = reverse_lazy('pokemon_card')
 
 class CollectionUpdateView(UpdateView):
     model = Collection
@@ -81,7 +81,7 @@ class TrainerDeleteView(DeleteView):
 class PokemonCardDeleteView(DeleteView):
     model = PokemonCard
     template_name = 'pokemon-card_delete.html'
-    success_url = reverse_lazy('pokemoncard-list')
+    success_url = reverse_lazy('pokemon_card')
 
 class CollectionDeleteView(DeleteView):
     model = Collection
