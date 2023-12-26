@@ -51,7 +51,7 @@ class CollectionCreateView(CreateView):
     model = Collection
     form_class = CollectionForm
     template_name = 'collection_create.html'
-    success_url = reverse_lazy('collection-list')
+    success_url = reverse_lazy('collection')
 
 # Update
 class TrainerUpdateView(UpdateView):
@@ -70,7 +70,7 @@ class CollectionUpdateView(UpdateView):
     model = Collection
     form_class = CollectionForm
     template_name = 'collection_update.html'
-    success_url = reverse_lazy('collection-list')
+    success_url = reverse_lazy('collection')
 
 #DELETE
 class TrainerDeleteView(DeleteView):
@@ -86,4 +86,4 @@ class PokemonCardDeleteView(DeleteView):
 class CollectionDeleteView(DeleteView):
     model = Collection
     template_name = 'collection_delete.html'
-    success_url = reverse_lazy('collection-list')
+    success_url = reverse_lazy('collection')

@@ -27,35 +27,36 @@
     <!--COLLECTION-->
     <main>
       {% block content %}
-      <section class="collection-container">
+      <section class="trainers-container">
         <table class="styled-table">
           <tbody>
             <tr>
-              <th>Trainer</th>
+              <th>Trainer Name</th>
               <th>Pokemon Card</th>
               <th>Collection Date</th>
+              <th>Action</th>
             </tr>
-  
+          {% for object in object_list %}
             <tr>
-              <td>Ash</td>
-              <td>Pikachu</td>
-              <td>2023-01-23</td>
+              <td>{{ object.trainer }}</td>
+              <td>{{ object.card }}</td>
+              <td>{{ object.collection_date }}</td>
+              <td>
+                <a href="collection_list/{{ object.id }}"><button class="btn-update">Edit</button></a> |
+                <a  href="collection_list/{{ object.id }}/delete" ><button class="btn-delete">Delete</button></a> |
+                <a href="{% url 'collection_create' %}"><button class="btn-add">Add New Collection</button></a>
+              </td>
             </tr>
-            <tr>
-              <td>Ash</td>
-              <td>Pikachu</td>
-              <td>2023-01-23</td>
-            </tr>
-            <tr>
-              <td>Ash</td>
-              <td>Pikachu</td>
-              <td>2023-01-23</td>
-            </tr>
+            {% empty %}
+          {% endfor %}
           </tbody>
         </table>
       </section>
+        <div>
+          {% include 'includes/pagination.html' %}
+        </div>  
       {% endblock %}
-  </main>
+    </main>
   <footer>
     <br />
     <br />
