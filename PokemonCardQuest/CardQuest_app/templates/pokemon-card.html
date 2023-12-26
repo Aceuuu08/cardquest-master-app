@@ -24,7 +24,7 @@
 
     <main>
       {% block content %}
-      <a href="{% url 'pokemon-card' %}"><button class="btn-add-pk">Add New Pokemon</button></a>
+      <a href="{% url 'pokemoncard_create' %}"><button class="btn-add-pk">Add New Pokemon</button></a>
       <section class="cards-container">
         {% for object in object_list %}
           <div class="card-box">
@@ -75,8 +75,8 @@
                 </table>
               </div>
             </div>
-            <a href="pokemon-card/{{ object.id }}"><button class="btn-update">Edit</button></a> |
-            <a  href="pokemon-card/{{ object.id }}/delete"><button class="btn-delete">Delete</button></a>
+            <a href="pokemon_card/{{ object.id }}"><button class="btn-update">Edit</button></a> |
+            <a  href="pokemon_card/{{ object.id }}/delete"><button class="btn-delete">Delete</button></a>
           </div>
         {% empty %}
         {% endfor %}
