@@ -32,7 +32,7 @@ urlpatterns = [
     path('pokemon_card/create', PokemonCardCreateView.as_view(), name='pokemoncard_create'),
     path('pokemon_card/<pk>', PokemonCardUpdateView.as_view(), name='pokemoncard_update'),
     path('pokemon_card/<pk>/delete',PokemonCardDeleteView.as_view(), name='pokemoncard_delete'),
-    path('collection_list/create', CollectionCreateView.as_view(), name='collection_create'),
-    path('collection_list/<pk>', CollectionUpdateView.as_view(), name='collection_update'),
-    path('collection_list/<pk>/delete',CollectionDeleteView.as_view(), name='collection_delete'),
+    path('collection/create', CollectionCreateView.as_view(), name='collection_create'),
+    path('collection/<pk>', CollectionUpdateView.as_view(), name='collection_update'),
+    path('collection/<pk>/delete',CollectionDeleteView.as_view(), name='collection_delete'),
 ]

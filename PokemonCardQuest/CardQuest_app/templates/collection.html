@@ -42,8 +42,8 @@
               <td>{{ object.card }}</td>
               <td>{{ object.collection_date }}</td>
               <td>
-                <a href="collection_list/{{ object.id }}"><button class="btn-update">Edit</button></a> |
-                <a  href="collection_list/{{ object.id }}/delete" ><button class="btn-delete">Delete</button></a> |
+                <a href="collection/{{ object.id }}"><button class="btn-update">Edit</button></a> |
+                <a  href="collection/{{ object.id }}/delete" ><button class="btn-delete">Delete</button></a> |
                 <a href="{% url 'collection_create' %}"><button class="btn-add">Add New Collection</button></a>
               </td>
             </tr>
